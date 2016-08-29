@@ -10,10 +10,16 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({
+	  width: 650,
+	   height: 800,
+	   webPreferences: {
+    	nodeIntegration: false
+  	   }
+   })
 
   // and load the index.html of the app.
-  mainWindow.loadURL(`file://${__dirname}/index.html`)
+  mainWindow.loadURL(`file://${__dirname}/app/index.html`)
 
   // Open the DevTools.
   //mainWindow.webContents.openDevTools()
@@ -52,5 +58,10 @@ app.on('activate', function () {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
-// Custom Menus
-const {Menu} = require('electron')
+// Change screen size if the screen is bigger than 1366x768 (because 800x600 is a bit small)
+function changeSize () {
+	if (electron.screen.getPrimaryDisplay().workAreaSize.width > 1366)
+		mainWindow.setSize(1280, 720, true)
+}
+
+app.on('ready', changeSize)
