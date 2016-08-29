@@ -1,7 +1,7 @@
 {
-  "name": "Command Block Starter Kit",
+  "name": "command-block-starter-kit",
   "version": "1.0.0",
-  "description": "A small application that includes all your Command Blocking needs!",
+  "description": "A small application that includes all your command blocking needs!",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
