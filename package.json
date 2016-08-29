@@ -8,20 +8,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron/electron-quick-start.git"
+    "url": "git+https://github.com/PandawanFr/CBStarterKit.git"
   },
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial"
+	"Command",
+	"Block",
+	"Minecraft",
+	"Start"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Pandawan",
   "bugs": {
-    "url": "https://github.com/electron/electron-quick-start/issues"
+    "url": "https://github.com/PandawanFr/CBStarterKit/issues"
   },
-  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "homepage": "https://github.com/PandawanFr/CBStarterKit#readme",
   "devDependencies": {
     "electron-prebuilt": "^1.2.0"
   }
