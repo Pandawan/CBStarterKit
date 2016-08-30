@@ -13,86 +13,108 @@
 	<link rel="stylesheet" href="./css/normalize.css"/>
 	<link rel="stylesheet" href="./css/skeleton.css"/>
 	<link rel="stylesheet" href="./css/custom.css"/>
+
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/modernizr.min.js"></script>
 </head>
+<div id="loading">
+	<img id="loading-image" src="./img/ajax-loader.gif" alt="Loading..." />
+</div>
 <body>
 	<div class="content">
 		<div id=title><h2>Minecraft Command Block Starter Kit</h2></div>
 
 		<br />
-		<h4>Tools</h4>
-		<div>
-			Put Search/Categories Options here
+		<div id="search-area">
+			<form id="live-search" action="" class="styled" method="post">
+				<fieldset>
+					<input type="text" class="text-input search" id="filter" autocomplete="off" value="" placeholder="Search"/>
+					<span id="filter-count"></span>
+				</fieldset>
+			</form>
 		</div>
-		<ul class="row">
-			<li class="four columns"><a href="http://fizzy81.github.io/animated-models/">JSON Model Animator</a><span class="badge green">RP & Models</span><br />Create animated models</li>
-			<li class="four columns"><a href="http://mctoolbox.me">MCToolBox</a><span class="badge red">General</span><br />All kinds of tools</li>
-			<li class="four columns"><a href="https://www.minecraftjson.com">MinecraftJSON</a><span class="badge red">General</span><br />Generate tellraw, signs, books, title and more</li>
-		</ul>
-		<ul class="row">
-			<li class="four columns"><a href="https://mcstacker.bimbimma.com">MCStacker</a><span class="badge red">General</span><br />Create custom entities, items, and more</li>
-			<li class="four columns"><a href="https://mc-map.djfun.de">MC Map Item Tool</a><br />Generate maps</li>
-			<li class="four columns"><a href="http://heads.freshcoal.com/">Minecraft Heads</a><br />Find player heads</li>
-		</ul>
-		<ul class="row">
-			<li class="four columns"><a href="http://www.plotz.co.uk">Plotz Modeller</a><br />Generate different shapes and models</li>
-			<li class="four columns"><a href="http://mcresourcecalculator.info/">Resource Calculator</a><br />Calculate what resources you need to craft items</li>
-			<li class="four columns"><a href="http://www.radthorne.com/exp.php">Experience Calculator</a><br />Calculate how much XP you need and how to get them</li>
-		</ul>
-		<ul class="row">
-			<li class="four columns"><a href="http://mrgarretto.com/cmdcombiner">Command Combiner</a><span class="badge red">General</span><br />Create one command contraptions</li>
-			<li class="four columns"><a href="http://mrgarretto.com/movetowards">Move Towards Generator</a><span class="badge blue">Entities</span><br />Make entities move towards each other</li>
-			<li class="four columns"><a href="https://mrgarretto.com/armorstand/">ArmorStand Modeler</a><span class="badge blue">Entities</span><br />Easily create models using ArmorStands w/ animations</li>
-		</ul>
-		<ul class="row">
-			<li class="four columns"><a href="https://mrgarretto.com/entityconverter">Entity Converter</a><span class="badge blue">Entities</span><br />Convert 1.10 summon commands to 1.11</li>
-			<li class="four columns"><a href="https://mrgarretto.com/facemotion">Facing Motion Generator</a><span class="badge blue">Entities</span><br />Make entities face each other</li>
-			<li class="four columns"><a href="http://mrgarretto.com/structurecmd">Structure Command Generator</a><br />Spawn structures using one commands</li>
-		</ul>
-		<ul class="row">
-			<li class="four columns"><a href="http://mrgarretto.com/blockcolors">Block Color Tool</a><br />Display all blocks with a similar color</li>
-			<li class="four columns"><a href="http://www.accidentalgames.com/media/cbcounter.php">Command Block Counter</a><br />Create time counters</li>
-			<li class="four columns"><a href="https://minecraft.novaskin.me/resourcepacks">Resource Pack Creator</a><span class="badge green">RP & Models</span><br />Create 1.9 Resource Packs online</li>
-		</ul>
-		<ul class="row">
-			<li class="four columns"><a href="http://worldpresets.com/preset-generator/">Preset Generator</a><br />Generate customized worlds</li>
-			<li class="four columns"><a href="http://haselkern.github.io/Minecraft-ArmorStand/">ArmorStand Pose Generator</a><span class="badge blue">Entities</span><br />Generate poses for ArmorStands</li>
-			<li class="four columns"><a href="http://www.needcoolshoes.com/banner">Banner Creator</a><br />Create custom banners (survival and creative)</li>
-		</ul>
-		<ul class="row">
-			<li class="four columns"><a href="http://bimbimma.com/minecraftmurals/">Minecraft Murals</a><br />Generate block murals out of pictures</li>
-			<li class="four columns"><a href="http://www.minecraftupdates.com/fireworkse">Fireworks Generator</a><span class="badge blue">Entities</span><br />Create custom fireworks</li>
-			<li class="four columns"><a href="http://www.summon-helper.net/">Summon Helper</a><span class="badge blue">Entities</span><br />Easily create summon commands</li>
-		</ul>
-		<ul class="row">
-			<li class="four columns"><a href="http://www.dragnoz.com/minecraft-title-generator/">Title Generator</a><br />Create custom /title commands</li>
-			<li class="four columns"><a href="http://www.dragnoz.com/minecraft-animated-texture-generator/">Animated Texture Generator</a><span class="badge green">RP & Models</span><br />Generate MCMETA files for animated textures</li>
-			<li class="four columns"><a href="http://www.dragnoz.com/pack-custom-sound-generators/">Custom Sound.json Generator</a><span class="badge green">RP & Models</span><br />Generate Sound.json for custom sounds in Resource Packs</li>
-		</ul>
-		<ul class="row">
-			<li class="four columns"><a href="https://minecraftcommand.science/">Minecraft Science</a><span class="badge red">General</span><br />Tons of different generators</li>
-			<li class="four columns"><a href="https://dinnerbone.com/minecraft/tools/coordinates/">Coordinate Tools</a><br />Find matching Chunk files based on World Coordinates</li>
-			<li class="four columns"><a href="https://dinnerbone.com/minecraft/tools/status/">Server Status Checker</a><br />Check if your server is working</li>
-		</ul>
-		<ul class="row">
-			<li class="four columns"><a href="https://docs.google.com/spreadsheets/d/1JJNxmb3vXs_cmhCIMsKhd9pj5yiN97PgFjLt45hjRdA/edit#gid=1146170315">Camera Path Generator</a><br />Generate cutscenes</li>
-			<li class="four columns"><a href="http://www.slicedlime.tv/custom-player-heads/">Custom Player Heads</a><br />Create your own Player Heads</li>
-			<li class="four columns"><a href="http://bimbimma.com/summonconverter/">1.8 to 1.9 Summon Converter</a><span class="badge blue">Entities</span><br />Convert 1.8 summon commands to 1.9</li>
-		</ul>
-		<ul class="row">
-			<li class="four columns"><a href="http://accidentalgames.com/media/durabilityModels.php">Dmg Value Model Generator</a><span class="badge green">RP & Models</span><br />Generate models for each damage values </li>
-			<li class="four columns"><a href="http://mclabs15.com/hologram/">Hologram Generator</a><br />Create Holograms in 1.9</li>
-			<li class="four columns"><a href="http://textcraft.net">Textcraft</a><br />Create minecraft and 8bit styled text and logo</li>
-		</ul>
+		<h4>Tools</h4>
+		<br />
+		<div class="cards">
+
+			<li class="four columns card" id="lnk b-rpmodel"><a href="http://fizzy81.github.io/animated-models/">JSON Model Animator</a><span class="badge green">RP & Models</span><br />Create animated models</li>
+			<li class="four columns card" id="lnk b-general"><a href="http://mctoolbox.me">MCToolBox</a><span class="badge red" >General</span><br />All kinds of tools</li>
+			<li class="four columns card" id="lnk b-general"><a href="https://www.minecraftjson.com">MinecraftJSON</a><span class="badge red" >General</span><br />Generate tellraw, signs, books, title and more</li>
+			<li class="four columns card" id="lnk b-general"><a href="https://mcstacker.bimbimma.com">MCStacker</a><span class="badge red" >General</span><br />Create custom entities, items, and more</li>
+			<li class="four columns card" id="lnk b-generation"><a href="https://mc-map.djfun.de">MC Map Item Tool</a><span class="badge orange">Generation</span><br />Generate maps</li>
+			<li class="four columns card" id="lnk b-rpmodel"><a href="http://heads.freshcoal.com/">Minecraft Heads</a><span class="badge green">RP & Models</span><br />Find player heads</li>
+			<li class="four columns card" id="lnk b-generation"><a href="http://www.plotz.co.uk">Plotz Modeller</a><span class="badge orange">Generation</span><br />Generate different shapes</li>
+			<li class="four columns card" id="lnk b-resources"><a href="http://mcresourcecalculator.info/">Resource Calculator</a><span class="badge yellow">Resources</span><br />Calculate what resources you need to craft items</li>
+			<li class="four columns card" id="lnk b-resources"><a href="http://www.radthorne.com/exp.php">Experience Calculator</a><span class="badge yellow">Resources</span><br />Calculate how much XP you need and how to get them</li>
+			<li class="four columns v" id="lnk b-general"><a href="http://mrgarretto.com/cmdcombiner">Command Combiner</a><span class="badge red" >General</span><br />Create one command contraptions</li>
+			<li class="four columns card" id="lnk b-entities"><a href="http://mrgarretto.com/movetowards">Move Towards Generator</a><span class="badge blue">Entities</span><br />Make entities move towards each other</li>
+			<li class="four columns card" id="lnk b-entities"><a href="https://mrgarretto.com/armorstand/">ArmorStand Modeler</a><span class="badge blue">Entities</span><br />Easily create models using ArmorStands w/ animations</li>
+			<li class="four columns card" id="lnk b-entities"><a href="https://mrgarretto.com/entityconverter">Entity Converter</a><span class="badge blue">Entities</span><br />Convert 1.10 summon commands to 1.11</li>
+			<li class="four columns card" id="lnk b-entities"><a href="https://mrgarretto.com/facemotion">Facing Motion Generator</a><span class="badge blue">Entities</span><br />Make entities face each other</li>
+			<li class="four columns card" id="lnk b-general"><a href="http://mrgarretto.com/structurecmd">Structure Command Generator</a><span class="badge red" >General</span><br />Spawn structures using one commands</li>
+			<li class="four columns card" id="lnk b-resources"><a href="http://mrgarretto.com/blockcolors">Block Color Tool</a><span class="badge yellow">Resources</span><br />Display all blocks with a similar color</li>
+			<li class="four columns card" id="lnk b-other"><a href="http://www.accidentalgames.com/media/cbcounter.php">Command Block Counter</a><span class="badge purple">Other</span><br />Create time counters</li>
+			<li class="four columns card" id="lnk b-rpmodel"><a href="https://minecraft.novaskin.me/resourcepacks">Resource Pack Creator</a><span class="badge green">RP & Models</span><br />Create 1.9 Resource Packs online</li>
+			<li class="four columns card" id="lnk b-generation"><a href="http://worldpresets.com/preset-generator/">Preset Generator</a><span class="badge orange">Generation</span><br />Generate customized worlds</li>
+			<li class="four columns card" id="lnk b-entities"><a href="http://haselkern.github.io/Minecraft-ArmorStand/">ArmorStand Pose Generator</a><span class="badge blue">Entities</span><br />Generate poses for ArmorStands</li>
+			<li class="four columns card" id="lnk b-resources"><a href="http://www.needcoolshoes.com/banner">Banner Creator</a><span class="badge yellow">Resources</span><br />Create custom banners (survival and creative)</li>
+			<li class="four columns card" id="lnk b-generation"><a href="http://bimbimma.com/minecraftmurals/">Minecraft Murals</a><span class="badge orange">Generation</span><br />Generate block murals out of pictures</li>
+			<li class="four columns card" id="lnk b-entities"><a href="http://www.minecraftupdates.com/fireworkse">Fireworks Generator</a><span class="badge blue">Entities</span><br />Create custom fireworks</li>
+			<li class="four columns card" id="lnk b-entities"><a href="http://www.summon-helper.net/">Summon Helper</a><span class="badge blue">Entities</span><br />Easily create summon commands</li>
+			<li class="four columns card" id="lnk b-general"><a href="http://www.dragnoz.com/minecraft-title-generator/">Title Generator</a><span class="badge red" >General</span><br />Create custom /title commands</li>
+			<li class="four columns card" id="lnk b-rpmodel"><a href="http://www.dragnoz.com/minecraft-animated-texture-generator/">Animated Texture Generator</a><span class="badge green">RP & Models</span><br />Generate MCMETA files for animated textures</li>
+			<li class="four columns card" id="lnk b-rpmodel"><a href="http://www.dragnoz.com/pack-custom-sound-generators/">Custom Sound.json Generator</a><span class="badge green">RP & Models</span><br />Generate Sound.json for custom sounds in Resource Packs</li>
+			<li class="four columns card" id="lnk b-general"><a href="https://minecraftcommand.science/">Minecraft Science</a><span class="badge red" >General</span><br />Tons of different generators</li>
+			<li class="four columns card" id="lnk b-other"><a href="https://dinnerbone.com/minecraft/tools/coordinates/">Coordinate Tools</a><span class="badge purple">Other</span><br />Find matching Chunk files based on World Coordinates</li>
+			<li class="four columns card" id="lnk b-other"><a href="https://dinnerbone.com/minecraft/tools/status/">Server Status Checker</a><span class="badge purple">Other</span><br />Check if your server is working</li>
+			<li class="four columns card" id="lnk b-general"><a href="https://docs.google.com/spreadsheets/d/1JJNxmb3vXs_cmhCIMsKhd9pj5yiN97PgFjLt45hjRdA/edit#gid=1146170315">Camera Path Generator</a><span class="badge red" >General</span><br />Generate cutscenes</li>
+			<li class="four columns card" id="lnk b-rpmodel"><a href="http://www.slicedlime.tv/custom-player-heads/">Custom Player Heads</a><span class="badge green">RP & Models</span><br />Create your own Player Heads</li>
+			<li class="four columns card" id="lnk b-entities"><a href="http://bimbimma.com/summonconverter/">1.8 to 1.9 Summon Converter</a><span class="badge blue">Entities</span><br />Convert 1.8 summon commands to 1.9</li>
+			<li class="four columns card" id="lnk b-rpmodel"><a href="http://accidentalgames.com/media/durabilityModels.php">Dmg Value Model Generator</a><span class="badge green">RP & Models</span><br />Generate models for each damage values </li>
+			<li class="four columns card" id="lnk b-other"><a href="http://mclabs15.com/hologram/">Hologram Generator</a><span class="badge purple">Other</span><br />Create Holograms in 1.9</li>
+			<li class="four columns card" id="lnk b-other"><a href="http://textcraft.net">Textcraft</a><span class="badge purple">Other</span><br />Create minecraft and 8bit styled text and logo</li>
+		</div>
 		<br />
 		<br />
-		<h4>Recommended YT Channels</h4>
 	</div>
+
+	<script>
+	var divs = $(".cards > li");
+	for(var i = 0; i < divs.length; i+=3) {
+		divs.slice(i, i+3).wrapAll("<ul class=\"row row-lnk\"></ul>");
+	}
+
+	$('input[type="text"]').keyup(function(){
+
+		var that = this, $allListElements = $('ul > li');
+
+		var $matchingListElements = $allListElements.filter(function(i, li){
+			var listItemText = $(li).text().toUpperCase(),
+			searchText = that.value.toUpperCase();
+			return ~listItemText.indexOf(searchText);
+		});
+
+		$allListElements.hide();
+		$matchingListElements.show();
+
+
+		$(".row-lnk").each (function () {
+			$(this).unwrap("ul");
+		});
+
+		var divs = $(".cards > li:visible");
+		for(var i = 0; i < divs.length; i+=3) {
+			divs.slice(i, i+3).wrapAll("<ul class=\"row row-lnk\"></ul>");
+		}
+	});
+
+
+	</script>
+	<script language="javascript" type="text/javascript">
+	window.onload = function(){ document.getElementById("loading").style.display = "none" }
+	</script>
 </body>
 <footer>
-	<p style="margin-bottom: 0em; padding-top: 0.5em;">Made with ❤ by Pandawan</p>
+	<p style="margin-bottom: 0em; padding-top: 0.5em;">Made with <b><span class="heart">❤</span></b> by Pandawan</p>
 </footer>
-<script>
-// You can also require other files to run in this process
-require('./renderer.js')
-</script>
 </html>
