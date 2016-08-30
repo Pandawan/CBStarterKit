@@ -1,5 +1,5 @@
 html, body {
-	max-width: 500em;
+	/**max-width: 750em;**/
 	text-align: center;
 	color: #3a3a3a;
 }
@@ -12,13 +12,10 @@ body {
 	display: inline-block;
 	text-align: left;
 	margin-top: 2em;
-	margin-left: 5em;
 }
 
 li {
 	display: inline-block;
-	width: 27.5em;
-	height: 4em;
 	border: 1px solid rgba(0,0,0,.15);
 	border-radius: 0.5em;
 	box-shadow: 0 1px 2px rgba(0,0,0,.1);
@@ -27,9 +24,40 @@ li {
 }
 
 ul {
-	max-width: 75em;
+	max-width: 150em;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
 }
 
 footer {
 	background-color: #eee;
+}
+
+.badge {
+	border-radius: 0.45em;
+	padding-left: 8px;
+	padding-right: 8px;
+	margin-right: 0.25em;
+	margin-left: 0.25em;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+	float: right;
+}
+
+.green {
+	background-color: #4CAF50;
+}
+
+.blue {
+	background-color: #0099ff;
+}
+
+.red {
+	background-color: #ff4b4b;
+}
+
+.four {
+	margin-left: 0.75em;
+	margin-right: 0.75em;
 }
