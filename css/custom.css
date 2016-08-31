@@ -14,7 +14,7 @@ body {
 	display: inline-block;
 	text-align: left;
 	margin-top: 2em;
-	width: 75em;
+	max-width: 75em;
 }
 
 li {
