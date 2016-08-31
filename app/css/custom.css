@@ -14,6 +14,7 @@ body {
 	display: inline-block;
 	text-align: left;
 	margin-top: 2em;
+	width: 75em;
 }
 
 li {
@@ -33,7 +34,7 @@ ul {
 
 footer {
 	background-color: #eee;
-	
+
 }
 
 #search-area {
@@ -109,8 +110,4 @@ footer {
      position: absolute;
      top: 0; left: 0; bottom: 0; right: 0;
   z-index: 100;
-}
-
-.heart {
-	color: #ff9cf7;
 }

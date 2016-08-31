@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="./css/normalize.css"/>
 	<link rel="stylesheet" href="./css/skeleton.css"/>
 	<link rel="stylesheet" href="./css/custom.css"/>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 	<script src="./js/jquery.min.js"></script>
 	<script src="./js/modernizr.min.js"></script>
@@ -36,7 +37,6 @@
 		<h4>Tools</h4>
 		<br />
 		<div class="cards">
-
 			<li class="four columns card" id="lnk b-rpmodel"><a href="http://fizzy81.github.io/animated-models/">JSON Model Animator</a><span class="badge green">RP & Models</span><br />Create animated models</li>
 			<li class="four columns card" id="lnk b-general"><a href="http://mctoolbox.me">MCToolBox</a><span class="badge red" >General</span><br />All kinds of tools</li>
 			<li class="four columns card" id="lnk b-general"><a href="https://www.minecraftjson.com">MinecraftJSON</a><span class="badge red" >General</span><br />Generate tellraw, signs, books, title and more</li>
@@ -46,7 +46,7 @@
 			<li class="four columns card" id="lnk b-generation"><a href="http://www.plotz.co.uk">Plotz Modeller</a><span class="badge orange">Generation</span><br />Generate different shapes</li>
 			<li class="four columns card" id="lnk b-resources"><a href="http://mcresourcecalculator.info/">Resource Calculator</a><span class="badge yellow">Resources</span><br />Calculate what resources you need to craft items</li>
 			<li class="four columns card" id="lnk b-resources"><a href="http://www.radthorne.com/exp.php">Experience Calculator</a><span class="badge yellow">Resources</span><br />Calculate how much XP you need and how to get them</li>
-			<li class="four columns v" id="lnk b-general"><a href="http://mrgarretto.com/cmdcombiner">Command Combiner</a><span class="badge red" >General</span><br />Create one command contraptions</li>
+			<li class="four columns card" id="lnk b-general"><a href="http://mrgarretto.com/cmdcombiner">Command Combiner</a><span class="badge red" >General</span><br />Create one command contraptions</li>
 			<li class="four columns card" id="lnk b-entities"><a href="http://mrgarretto.com/movetowards">Move Towards Generator</a><span class="badge blue">Entities</span><br />Make entities move towards each other</li>
 			<li class="four columns card" id="lnk b-entities"><a href="https://mrgarretto.com/armorstand/">ArmorStand Modeler</a><span class="badge blue">Entities</span><br />Easily create models using ArmorStands w/ animations</li>
 			<li class="four columns card" id="lnk b-entities"><a href="https://mrgarretto.com/entityconverter">Entity Converter</a><span class="badge blue">Entities</span><br />Convert 1.10 summon commands to 1.11</li>
@@ -78,15 +78,30 @@
 		<br />
 	</div>
 
-	<script>
+	<script type="text/javascript">
+	//Sort the List Alphabetically
+	var mylist = $('.cards');
+	var listitems = mylist.children('li').get();
+	listitems.sort(function(a, b) {
+		var compA = $(a).text().toUpperCase();
+		var compB = $(b).text().toUpperCase();
+		return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+	})
+	$.each(listitems, function(idx, itm) { mylist.append(itm); });
+
+	</script>
+
+	<script type="text/javascript">
+	// Put the list items inside ul elements
 	var divs = $(".cards > li");
 	for(var i = 0; i < divs.length; i+=3) {
 		divs.slice(i, i+3).wrapAll("<ul class=\"row row-lnk\"></ul>");
 	}
 
+	// Search Bar System (hide and show wanted elements)
 	$('input[type="text"]').keyup(function(){
 
-		var that = this, $allListElements = $('ul > li');
+		var that = this, $allListElements = $('.card');
 
 		var $matchingListElements = $allListElements.filter(function(i, li){
 			var listItemText = $(li).text().toUpperCase(),
@@ -98,7 +113,7 @@
 		$matchingListElements.show();
 
 
-		$(".row-lnk").each (function () {
+		$(".card").each (function () {
 			$(this).unwrap("ul");
 		});
 
@@ -107,14 +122,15 @@
 			divs.slice(i, i+3).wrapAll("<ul class=\"row row-lnk\"></ul>");
 		}
 	});
-
-
 	</script>
+
+
 	<script language="javascript" type="text/javascript">
+	// Disable loading page once done
 	window.onload = function(){ document.getElementById("loading").style.display = "none" }
 	</script>
 </body>
 <footer>
-	<p style="margin-bottom: 0em; padding-top: 0.5em;">Made with <b><span class="heart">❤</span></b> by Pandawan</p>
+	<p style="margin-bottom: 0em; padding-top: 0.5em;"><b><i class="fa fa-code" aria-hidden="true"></i></b> with <i class="fa fa-heart" aria-hidden="true"></i> by Pandawan</p>
 </footer>
 </html>
